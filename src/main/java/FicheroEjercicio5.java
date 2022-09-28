@@ -15,7 +15,7 @@ public class FicheroEjercicio5 {
     }
 
     public static void moverFichero(File fichero, File dirDestinoFile) {
-        
+
     }
 
     public static void borrarDirectorio(File directorio) {
