@@ -32,6 +32,11 @@ public class FicheroEjercicio7 {
                     char siNo = sc.next().charAt(0);
                     if(siNo == 's' || siNo == 'S') 
                     {
+                        for(String s : listar)
+                        {
+                            File borrarFichero = new File(directorio.getPath(),s);
+                            borrarFichero.delete();
+                        }
                         directorio.delete();
                     }
                     else if(siNo == 'n' || siNo == 'N')
