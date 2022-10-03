@@ -16,14 +16,7 @@ public class FicheroEjercicio6 {
         {
             @Override
             public boolean accept(File file) {
-                if(file.getName().endsWith(".doc"))
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return file.getName().endsWith(".doc");
             }
         };
 
@@ -33,15 +26,17 @@ public class FicheroEjercicio6 {
         {
             System.out.println("El directorio no existe");
         }
-        if(!directorio.isDirectory())
+        else if(!directorio.isDirectory())
         {
             System.out.println("No es un directorio");
         }
-
-        File[] ficheros = directorio.listFiles(filtrarArchivos);
-        for(File f : ficheros) 
+        else
         {
-            System.out.println(f.getName());
+            File[] ficheros = directorio.listFiles(filtrarArchivos);
+            for(File f : ficheros) 
+            {
+                System.out.println(f.getName());
+            }
         }
     }
 }
